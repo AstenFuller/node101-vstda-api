@@ -1,15 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
 
-var bodyParser = require('body-parser');
-
 const app = express();
 
 app.use(morgan('dev'));
 
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(express.urlencoded());
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 let mockData = [{
         todoItemId: 0,
