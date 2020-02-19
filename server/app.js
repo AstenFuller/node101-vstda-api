@@ -29,7 +29,7 @@ let mockData = [{
     }];
 
 app.get('/', (req, res) => {
-    res.status(200).send({status: 'ok'});
+    res.status(200).send({status: 'ok', Use: 'Go to /api/TodoItems or /api/TodoItems/:number'});
 });
 
 app.get('/api/TodoItems', (req, res) => {
